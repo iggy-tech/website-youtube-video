@@ -13,6 +13,7 @@ import Brands from "./brands";
 import Services from "./services";
 import FAQS from "./faq";
 import { useRef } from "react";
+import { InfiniteMovingCardsDemo } from "./snippets/infinite-moving-card-snippet";
 
 export default function Home() {
 
@@ -106,6 +107,7 @@ export default function Home() {
         </div>
     
           <Services />
+          <InfiniteMovingCardsDemo />
           <FAQS />
   
       </div>
