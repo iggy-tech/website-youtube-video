@@ -3,9 +3,10 @@ import Link from "next/link";
 
 interface DropDownMenuProps {
   onClose: () => void;
+  scrollToServices: () => void; // Add scrollToServices function to props
 }
 
-const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
+const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose, scrollToServices }) => {
   return (
     <motion.div
       className="
@@ -31,16 +32,21 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
       transition={{ duration: 0.5 }}
     >
       <div className="flex-col flex space-y-10">
-        <Link href="/pricing" className=" text-black text-2xl">
+        <Link href="/pricing" className="text-black text-2xl">
           Pricing
         </Link>
-        <Link href="/contact" className=" text-black text-2xl">
+        <Link href="/contact" className="text-black text-2xl">
           Contact
         </Link>
 
-        <Link href="/book" className=" text-black text-2xl">
+        <Link href="/book" className="text-black text-2xl">
           Book a call
         </Link>
+
+        {/* Add onClick handler to Services link */}
+        <div onClick={() => { scrollToServices(); onClose(); }} className="cursor-pointer text-black text-2xl">
+          Services
+        </div>
       </div>
     </motion.div>
   );
