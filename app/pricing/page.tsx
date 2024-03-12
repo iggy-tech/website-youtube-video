@@ -79,6 +79,7 @@ const Pricing = () => {
              scrollToGraphicDesign={() => {}}
              scrollToShopifyStores={() => {}}
              scrollToBrands={() => {}}
+              scrollToServices={() => {}}
       />
 
 <div className="flex items-center justify-center flex-col   ">
